@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="pt-BR" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Malu Tatu no cinema | Campanha de apoio</title>
+  <meta name="description" content="Malu Tatu é uma animação goiana sobre uma tatuzinha engenheira que enfrenta a seca do Cerrado. Ajude a levar o filme aos cinemas de Goiânia e do Brasil, com Pix, e ganhe seu nome nos créditos finais.">
+  <meta name="theme-color" content="#2b1a12">
+  <link rel="canonical" href="https://malutatu.com.br/">
+
+  <!-- Prévia de compartilhamento (WhatsApp, Facebook, etc.) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Malu Tatu">
+  <meta property="og:url" content="https://malutatu.com.br/">
+  <meta property="og:title" content="Leve Malu Tatu aos cinemas 🎬">
+  <meta property="og:description" content="Animação feita em Goiás sobre o Cerrado. Apoie com Pix e tenha seu nome nos créditos finais do filme.">
+  <meta property="og:image" content="https://malutatu.com.br/assets/img/og-image.jpg">
+  <meta property="og:image:secure_url" content="https://malutatu.com.br/assets/img/og-image.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Malu, a tatuzinha de capacete amarelo, apontando para um rio no Cerrado, com o título Malu Tatu">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Leve Malu Tatu aos cinemas 🎬">
+  <meta name="twitter:description" content="Animação feita em Goiás sobre o Cerrado. Apoie com Pix e tenha seu nome nos créditos finais do filme.">
+  <meta name="twitter:image" content="https://malutatu.com.br/assets/img/og-image.jpg">
+
+  <link rel="icon" href="assets/img/icon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/img/icon-180.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/img/hero-960.webp" media="(max-width: 960px)">
+  <link rel="preload" as="image" href="assets/img/hero-1920.webp" media="(min-width: 961px)">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="skip" href="#apoiar">Pular para como apoiar</a>
+
+<header class="topbar" id="topo">
+  <a href="#topo" class="topbar__logo" aria-label="Malu Tatu, voltar ao início">
+    <img src="assets/img/icon-180.png" alt="" width="36" height="36">
+    <img src="assets/img/logo-malutatu.webp" alt="Malu Tatu" width="140" height="25">
+  </a>
+  <nav class="topbar__nav" aria-label="Seções">
+    <a href="#tunel">Arrecadação</a>
+    <a href="#historia">A história</a>
+    <a href="#bastidores">Bastidores</a>
+    <a href="#quem-faz">Quem faz</a>
+    <a href="#compartilhar">Compartilhar</a>
+  </nav>
+  <a href="#apoiar" class="btn btn--small btn--yellow">Apoiar</a>
+</header>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <picture>
+      <source media="(max-width: 960px)" srcset="assets/img/hero-960.webp">
+      <img class="hero__bg" src="assets/img/hero-1920.webp" alt="" width="1920" height="1012" fetchpriority="high">
+    </picture>
+    <div class="hero__shade"></div>
+    <div class="hero__content wrap">
+      <div class="hero__inner">
+      <img class="hero__logo" src="assets/img/logo-malutatu.webp" alt="Malu Tatu" width="1200" height="213">
+      <p class="hero__kicker">Um longa-metragem de animação feito em Goiás</p>
+      <h1 class="hero__title">A Malu encontrou o rio.<br>Agora ela precisa chegar ao cinema.</h1>
+      <p class="hero__lead">Depois de muitos anos de trabalho, o filme está quase pronto para as telonas. Falta o último túnel: a distribuição. <strong>Cave com a gente</strong> e ganhe seu nome nos créditos finais.</p>
+      <div class="hero__ctas">
+        <a href="#apoiar" class="btn btn--yellow btn--big">Quero levar a Malu ao cinema</a>
+        <a href="#teaser" class="btn btn--ghost">
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>
+          Ver o teaser
+        </a>
+      </div>
+      <a href="#tunel" class="hero__chip" data-hero-chip hidden>
+        <span class="hero__chip-dot"></span>
+        <span data-hero-chip-text></span>
+      </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BARRA / TÚNEL ============ -->
+  <section class="tunnel-section" id="tunel" aria-labelledby="tunel-titulo">
+    <div class="wrap">
+      <p class="eyebrow">O túnel da Malu</p>
+      <h2 id="tunel-titulo">Cada Pix é mais um palmo cavado</h2>
+      <p class="section-lead">Primeiro, até os cinemas de <strong>Goiânia</strong>. Depois, até as salas do <strong>Brasil inteiro</strong>.</p>
+
+      <div class="tunnel-stats">
+        <div class="tunnel-stats__main">
+          <span class="tunnel-stats__label">Já cavamos</span>
+          <span class="tunnel-stats__value" data-raised>R$ 0</span>
+        </div>
+        <div class="tunnel-stats__side">
+          <span data-remaining>Faltam R$ 100 mil para Goiânia</span>
+          <span class="tunnel-stats__people" data-supporters hidden></span>
+        </div>
+      </div>
+
+      <div class="tunnel" data-tunnel role="progressbar" aria-valuemin="0" aria-valuemax="500000" aria-valuenow="0" aria-valuetext="R$ 0 arrecadados" aria-label="Arrecadação da campanha">
+        <div class="tunnel__track">
+          <div class="tunnel__fill tunnel__fill--earth" data-fill-earth></div>
+          <div class="tunnel__fill tunnel__fill--water" data-fill-water></div>
+          <div class="tunnel__milestone" aria-hidden="true"><span></span></div>
+        </div>
+        <img class="tunnel__malu" data-tunnel-malu src="assets/img/malu-cava.webp" alt="" width="200" height="320">
+        <div class="tunnel__labels" aria-hidden="true">
+          <span class="tunnel__label tunnel__label--start">R$ 0</span>
+          <span class="tunnel__label tunnel__label--mid"><strong>Goiânia</strong>R$ 100 mil</span>
+          <span class="tunnel__label tunnel__label--end"><strong>Brasil</strong>R$ 500 mil</span>
+        </div>
+      </div>
+
+      <div class="tunnel-legend">
+        <span><i class="swatch swatch--earth"></i>Rumo a Goiânia</span>
+        <span><i class="swatch swatch--water"></i>Rumo ao Brasil</span>
+        <span class="tunnel-legend__updated" data-updated></span>
+      </div>
+      <p class="tunnel-note">A primeira metade da barra vai até a meta de Goiânia (R$ 100 mil); a segunda vai de lá até a meta Brasil (R$ 500 mil).</p>
+    </div>
+  </section>
+
+  <!-- ============ TEASER ============ -->
+  <section class="teaser" id="teaser" aria-labelledby="teaser-titulo">
+    <div class="wrap">
+      <p class="eyebrow eyebrow--light">Um pedacinho do filme</p>
+      <h2 id="teaser-titulo">Conheça a Malu em 1 minuto e meio</h2>
+      <div class="video">
+        <button class="video__facade" type="button" data-video="https://player.vimeo.com/video/1057992089?h=56e1a46bf4&autoplay=1&title=0&byline=0&portrait=0&dnt=1" aria-label="Assistir ao teaser de Malu Tatu">
+          <img src="assets/img/cena-rio.webp" alt="" loading="lazy" width="1000" height="527">
+          <span class="video__play"><svg viewBox="0 0 24 24" width="40" height="40" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg></span>
+          <span class="video__caption">Assistir ao teaser</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HISTÓRIA ============ -->
+  <section class="story" id="historia" aria-labelledby="historia-titulo">
+    <div class="wrap">
+      <p class="eyebrow">A história por trás da campanha</p>
+      <h2 id="historia-titulo">Ninguém cava sozinho</h2>
+
+      <article class="chapter reveal">
+        <figure class="chapter__img"><img src="assets/img/cena-mapa.webp" alt="Malu segurando um mapa no meio do Cerrado" loading="lazy" width="1000" height="527"></figure>
+        <div class="chapter__text">
+          <span class="chapter__num">1</span>
+          <h3>Uma tatu que não desiste</h3>
+          <p>Todo ano, a Toca dos Tatus sofre com a seca. A Malu, uma tatu-mulita teimosa e cheia de ideias, vira a <strong>primeira engenheira da Toca dos Construtores</strong> e tem um plano: trazer a água do rio até a toca.</p>
+          <p>Só que ninguém escuta. E ainda tem o Tocaia, um caçador que trafica animais do Cerrado.</p>
+        </div>
+      </article>
+
+      <article class="chapter chapter--flip reveal">
+        <figure class="chapter__img"><img src="assets/img/cena-construtores.webp" alt="Tatus construtores de capacete reunidos na Toca" loading="lazy" width="1000" height="527"></figure>
+        <div class="chapter__text">
+          <span class="chapter__num">2</span>
+          <h3>Anos cavando, quadro a quadro</h3>
+          <p>Fazer animação no Brasil é como cavar um túnel com as próprias patas. O Malu Tatu levou <strong>anos de trabalho</strong> da Caolha Filmes, de Goiânia, com o estúdio Dogzilla e a voz de <strong>Tainá Müller</strong> na protagonista.</p>
+          <p>O roteiro venceu o prêmio de <strong>Melhor Roteiro de Longa-metragem no FRAPA 2024</strong>, o maior festival de roteiro da América Latina.</p>
+        </div>
+      </article>
+
+      <article class="chapter reveal">
+        <figure class="chapter__img"><img src="assets/img/cena-amigos.webp" alt="Malu ao lado dos amigos Bola e Cascudo" loading="lazy" width="1000" height="527"></figure>
+        <div class="chapter__text">
+          <span class="chapter__num">3</span>
+          <h3>O último túnel</h3>
+          <p>Filme pronto não entra em cartaz sozinho. Para chegar às salas e encontrar o público, é preciso um lançamento, e lançamento custa caro.</p>
+          <p>No filme, a Malu descobre que precisa <strong>pedir ajuda aos amigos</strong> para salvar a Toca. A gente também. É por isso que estamos aqui.</p>
+          <a href="#bastidores" class="btn btn--brown">Entenda como funciona</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ BASTIDORES DA DISTRIBUIÇÃO ============ -->
+  <section class="backstage" id="bastidores" aria-labelledby="bastidores-titulo">
+    <div class="wrap backstage__grid">
+      <div class="backstage__intro">
+        <p class="eyebrow eyebrow--yellow">Bastidores</p>
+        <h2 id="bastidores-titulo">Como um filme chega ao cinema</h2>
+        <p>Por trás de cada estreia existe um trabalho que quase ninguém vê. É camada por camada, como um túnel.</p>
+        <img class="backstage__char" src="assets/img/cascudo.webp" alt="" loading="lazy" width="511" height="640">
+      </div>
+
+      <ol class="layers">
+        <li class="layer reveal">
+          <h3>Conseguir a sala</h3>
+          <p>A distribuidora monta a estratégia e negocia salas, datas e horários. Cinemas são empresas e querem filmes que atraiam público. A disputa é com produções de Hollywood que têm milhões para investir em publicidade.</p>
+        </li>
+        <li class="layer reveal">
+          <h3>Montar a equipe de lançamento</h3>
+          <p>Marketing, assessoria de imprensa, redes sociais, design, produção de eventos, negociação com os cinemas. Um lançamento é o trabalho de muita gente.</p>
+        </li>
+        <li class="layer reveal">
+          <h3>Comprar mídia <span class="layer__tag">o maior custo</span></h3>
+          <p>Postar o trailer não basta. É preciso pagar anúncios nas redes, no Google e no YouTube e, quando o orçamento permite, em rádio, TV e outdoor. É assim que as pessoas descobrem que o filme existe, sabem onde ele está passando e decidem assistir.</p>
+        </li>
+        <li class="layer reveal">
+          <h3>Materiais, arquivos e eventos</h3>
+          <p>Cartazes e peças de divulgação, os arquivos de exibição para cada cinema, pré-estreias, a ida da equipe e do elenco a entrevistas.</p>
+        </li>
+        <li class="layer reveal">
+          <h3>Pagar tudo antes</h3>
+          <p>Todo esse investimento acontece antes da estreia, sem saber se haverá retorno. E o ingresso não vai inteiro para quem fez o filme: uma parte fica com o cinema, outra com a distribuição, e ainda há os custos do lançamento a recuperar.</p>
+        </li>
+      </ol>
+    </div>
+
+    <div class="wrap">
+      <div class="today reveal">
+        <div>
+          <p class="today__label">Onde estamos hoje</p>
+          <p class="today__text">Como não conseguimos patrocínio a tempo, a previsão é uma <strong>estreia pequena em Goiânia</strong>: provavelmente uma ou duas salas, por uma semana (ainda em negociação).</p>
+          <p class="today__text">Cada real arrecadado vira divulgação. E divulgação é o que enche as sessões, faz o filme <strong>ganhar mais semanas em cartaz</strong> e abre a porta para <strong>outras cidades</strong>.</p>
+        </div>
+        <a href="#apoiar" class="btn btn--yellow btn--big">Apoiar com Pix</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ POR QUE LEVAR AS CRIANÇAS ============ -->
+  <section class="why" aria-labelledby="why-titulo">
+    <img class="why__deco why__deco--left" src="assets/img/bola.webp" alt="" loading="lazy" width="487" height="640">
+    <img class="why__deco why__deco--right" src="assets/img/fadinha-feliz.webp" alt="" loading="lazy" width="484" height="640">
+    <div class="wrap">
+      <p class="eyebrow eyebrow--light">Para pais, mães, tios e avós</p>
+      <h2 id="why-titulo">Um filme que você vai querer ver com as crianças</h2>
+      <div class="cards">
+        <div class="card reveal">
+          <span class="card__icon" aria-hidden="true">🌳</span>
+          <h3>O Cerrado na telona</h3>
+          <p>Tatus, cuícas, ipês e veredas. Bichos e paisagens daqui, com um alerta contra o tráfico de animais silvestres e as queimadas.</p>
+        </div>
+        <div class="card reveal">
+          <span class="card__icon" aria-hidden="true">👷‍♀️</span>
+          <h3>Meninas também constroem</h3>
+          <p>A Malu é a primeira engenheira da Toca. Uma heroína teimosa, que erra, se levanta e aprende a trabalhar em equipe.</p>
+        </div>
+        <div class="card reveal">
+          <span class="card__icon" aria-hidden="true">🎬</span>
+          <h3>Cinema feito aqui</h3>
+          <p>Uma animação goiana, independente, para as crianças verem no cinema uma história com a cara do Brasil.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ QUEM FAZ ============ -->
+  <section class="credibility" id="quem-faz" aria-labelledby="quem-faz-titulo">
+    <div class="wrap">
+      <p class="eyebrow">Quem está cavando com a gente</p>
+      <h2 id="quem-faz-titulo">Uma equipe premiada no Brasil e no mundo</h2>
+
+      <ul class="badges">
+        <li class="badge reveal">
+          <span class="badge__big">FRAPA 2024</span>
+          <span>Melhor Roteiro de Longa-metragem para <em>Malu Tatu</em></span>
+        </li>
+        <li class="badge reveal">
+          <span class="badge__big">Grande Otelo</span>
+          <span>Grande Prêmio do Cinema Brasileiro 2023, para o curta <em>A Menina Atrás do Espelho</em></span>
+        </li>
+        <li class="badge reveal">
+          <span class="badge__big">+60 prêmios</span>
+          <span>da Caolha Filmes em mais de 500 festivais</span>
+        </li>
+        <li class="badge reveal">
+          <span class="badge__big">10 festivais</span>
+          <span>qualificadores ao Oscar na trajetória da Caolha, como Málaga, Bogoshorts e Chicago Children's</span>
+        </li>
+      </ul>
+
+      <div class="people">
+        <div class="person reveal">
+          <h3>Iuri Moreno</h3>
+          <p class="person__role">Direção, roteiro e produção executiva</p>
+          <p>Sócio da Caolha Filmes, de Goiânia. Venceu o troféu Grande Otelo com <em>A Menina Atrás do Espelho</em> e, com <em>O Malabarista</em> e <em>Geração Alpha</em>, passou por mais de 400 festivais, como Havana, Chicago Children's e Huelva.</p>
+        </div>
+        <div class="person reveal">
+          <h3>Carol Sakura</h3>
+          <p class="person__role">Direção e roteiro</p>
+          <p>Doutora em Letras pela UFPR, roteirista e diretora de <em>Apneia</em>, premiado em mais de 20 festivais, incluindo Melhor Curta no Festival de Gramado.</p>
+        </div>
+        <div class="person reveal">
+          <h3>Tainá Müller</h3>
+          <p class="person__role">Voz da Malu</p>
+          <p>Atriz conhecida do cinema e da TV brasileira, dá voz à protagonista. Ao lado dela, Mckeidy Lisita é o Bola.</p>
+        </div>
+      </div>
+
+      <p class="partners">Animação do estúdio <strong>Dogzilla</strong> (da série <em>O Menino Maluquinho</em>, da Netflix, indicada ao Emmy) · Distribuição <strong>Olhar Filmes</strong> · O projeto participou dos mercados Rio2C, Ventana Sur, NordesteLab e SAPI.</p>
+    </div>
+  </section>
+
+  <!-- ============ PERSONAGENS ============ -->
+  <section class="cast" aria-labelledby="cast-titulo">
+    <div class="wrap">
+      <p class="eyebrow">A turma da Toca</p>
+      <h2 id="cast-titulo">Conheça os personagens</h2>
+    </div>
+    <div class="cast__scroller" tabindex="0" aria-label="Personagens, role para o lado">
+      <figure class="char">
+        <img src="assets/img/malu-pe.webp" alt="Malu" loading="lazy" width="401" height="640">
+        <figcaption><strong>Malu</strong>Determinada e inconsequente. Primeira engenheira da Toca.</figcaption>
+      </figure>
+      <figure class="char">
+        <img src="assets/img/bola.webp" alt="Bola" loading="lazy" width="487" height="640">
+        <figcaption><strong>Bola</strong>Tatu-bola paz e amor, apaixonado por plantas.</figcaption>
+      </figure>
+      <figure class="char">
+        <img src="assets/img/cascudo.webp" alt="Cascudo" loading="lazy" width="511" height="640">
+        <figcaption><strong>Cascudo</strong>Tatu-canastra cabeça-dura e nerd das tecnologias.</figcaption>
+      </figure>
+      <figure class="char">
+        <img src="assets/img/fadinha.webp" alt="Fadinha" loading="lazy" width="491" height="640">
+        <figcaption><strong>Fadinha</strong>Tagarela, fã número 1 da Malu.</figcaption>
+      </figure>
+      <figure class="char">
+        <img src="assets/img/marlene.webp" alt="Dona Marlene" loading="lazy" width="552" height="640">
+        <figcaption><strong>Dona Marlene</strong>90 anos e uma surdez bem seletiva.</figcaption>
+      </figure>
+      <figure class="char">
+        <img src="assets/img/mataco.webp" alt="Mataco" loading="lazy" width="438" height="640">
+        <figcaption><strong>Mataco</strong>Mimado, mas sonha em ser fotógrafo.</figcaption>
+      </figure>
+      <figure class="char">
+        <img src="assets/img/rocco.webp" alt="Chefe Rocco" loading="lazy" width="622" height="640">
+        <figcaption><strong>Chefe Rocco</strong>O durão chefe dos Construtores.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ APOIAR (PIX) ============ -->
+  <section class="donate" id="apoiar" aria-labelledby="apoiar-titulo">
+    <div class="wrap donate__grid">
+      <div class="donate__intro">
+        <p class="eyebrow eyebrow--yellow">Apoie com Pix</p>
+        <h2 id="apoiar-titulo">Cave com a gente</h2>
+        <p>Qualquer valor faz diferença. E todo mundo que contribuir ganha o <strong>nome nos créditos finais do filme</strong>.</p>
+        <div class="credits-roll" aria-hidden="true">
+          <div class="credits-roll__inner">
+            <span class="credits-roll__head">Agradecimentos</span>
+            <span>O nome do seu filho</span>
+            <span>A sua família</span>
+            <span class="credits-roll__you">Seu nome aqui ✨</span>
+            <span>Seus avós</span>
+            <span>A turma do trabalho</span>
+            <span>Quem você quiser homenagear</span>
+          </div>
+        </div>
+        <p class="donate__deadline" data-deadline hidden></p>
+        <img class="donate__malu" src="assets/img/malu-plano.webp" alt="" loading="lazy" width="378" height="640">
+      </div>
+
+      <div class="pix-card">
+        <h3 class="pix-card__title">1. Escolha um valor</h3>
+        <div class="amounts" role="radiogroup" aria-label="Valor do apoio">
+          <button type="button" class="amount" role="radio" aria-checked="false" data-amount="30">R$ 30</button>
+          <button type="button" class="amount" role="radio" aria-checked="true" data-amount="50">R$ 50</button>
+          <button type="button" class="amount" role="radio" aria-checked="false" data-amount="100">R$ 100</button>
+          <button type="button" class="amount" role="radio" aria-checked="false" data-amount="200">R$ 200</button>
+          <button type="button" class="amount" role="radio" aria-checked="false" data-amount="500">R$ 500</button>
+          <button type="button" class="amount" role="radio" aria-checked="false" data-amount="outro">Outro valor</button>
+        </div>
+        <label class="amount-other" data-other hidden>
+          <span>Valor em reais</span>
+          <input type="text" inputmode="decimal" placeholder="Ex.: 75" data-other-input autocomplete="off">
+        </label>
+
+        <h3 class="pix-card__title">2. Copie o código Pix</h3>
+        <button type="button" class="btn btn--yellow btn--block btn--big" data-copy-brcode>
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v14h2V3h12V1zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h11v14z"/></svg>
+          <span data-copy-brcode-label>Copiar Pix de R$ 50</span>
+        </button>
+        <p class="pix-card__hint">No app do seu banco, escolha <strong>Pix → Pix Copia e Cola</strong> e cole o código. O valor já vem preenchido.</p>
+
+        <div class="pix-key">
+          <div>
+            <span class="pix-key__label">Prefere digitar? Chave Pix (CPF)</span>
+            <span class="pix-key__value">996.301.411-91</span>
+            <span class="pix-key__name">Favorecido: Iuri Moreno Chaves Pereira</span>
+          </div>
+          <button type="button" class="btn btn--small btn--outline" data-copy-key>Copiar chave</button>
+        </div>
+
+        <details class="qr" data-qr>
+          <summary>Mostrar QR Code (para pagar de outro aparelho)</summary>
+          <img src="assets/img/pix-qrcode.png" alt="QR Code Pix para Iuri Moreno Chaves Pereira" loading="lazy" width="600" height="600">
+        </details>
+
+        <h3 class="pix-card__title">3. Garanta seu nome nos créditos</h3>
+        <p class="pix-card__credits" data-credits-text>Guarde o comprovante. Em breve vamos abrir aqui o formulário para você confirmar como o seu nome (ou o da sua família) vai aparecer nos créditos.</p>
+        <a class="btn btn--brown btn--block" data-credits-link hidden target="_blank" rel="noopener">Informar meu nome para os créditos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PARA ONDE VAI ============ -->
+  <!-- VALORES PROVISÓRIOS: divisão sugerida, confirmar com o Iuri antes de publicar -->
+  <section class="uses" aria-labelledby="uses-titulo">
+    <div class="wrap">
+      <p class="eyebrow">Transparência</p>
+      <h2 id="uses-titulo">Para onde vai o seu Pix</h2>
+      <div class="uses__grid">
+        <div class="use reveal">
+          <h3><span class="swatch swatch--earth"></span>Meta Goiânia · R$ 100 mil</h3>
+          <p class="use__goal">Um lançamento de verdade em Goiânia, para a Malu lotar sessões e ficar mais tempo em cartaz.</p>
+          <ul class="use__list">
+            <li><span style="--w:45%"></span><b>45%</b> Compra de mídia: anúncios em redes sociais, Google, YouTube, rádio e outdoor</li>
+            <li><span style="--w:25%"></span><b>25%</b> Equipe de lançamento: marketing, imprensa, redes sociais e design</li>
+            <li><span style="--w:15%"></span><b>15%</b> Materiais de divulgação e arquivos para os cinemas</li>
+            <li><span style="--w:15%"></span><b>15%</b> Pré-estreia e eventos com a equipe</li>
+          </ul>
+        </div>
+        <div class="use use--water reveal">
+          <h3><span class="swatch swatch--water"></span>Meta Brasil · R$ 500 mil</h3>
+          <p class="use__goal">Levar a Malu para salas de outras cidades do país.</p>
+          <ul class="use__list">
+            <li><span style="--w:40%"></span><b>40%</b> Lançamento em salas de outras capitais</li>
+            <li><span style="--w:35%"></span><b>35%</b> Compra de mídia nacional</li>
+            <li><span style="--w:15%"></span><b>15%</b> Equipe e assessoria de imprensa nacional</li>
+            <li><span style="--w:10%"></span><b>10%</b> Materiais, arquivos e viagens da equipe</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COMPARTILHAR ============ -->
+  <section class="share" id="compartilhar" aria-labelledby="share-titulo">
+    <div class="wrap share__grid">
+      <div class="share__intro">
+        <img class="share__fadinha" src="assets/img/fadinha.webp" alt="" loading="lazy" width="491" height="640">
+        <p class="eyebrow eyebrow--light">Não pode doar agora?</p>
+        <h2 id="share-titulo">Compartilhar também é cavar!</h2>
+        <p>Mande para os grupos da família, da escola e dos amigos. Cada pessoa que conhece a Malu deixa o túnel um pouco mais perto do cinema.</p>
+      </div>
+      <div class="share__box">
+        <div class="wa-bubble" data-share-message></div>
+        <div class="share__buttons">
+          <button type="button" class="btn btn--yellow btn--block" data-copy-message>
+            <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v14h2V3h12V1zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h11v14z"/></svg>
+            Copiar mensagem
+          </button>
+          <a class="btn btn--whatsapp btn--block" data-wa-link target="_blank" rel="noopener">
+            <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.04 21.5h-.01a9.45 9.45 0 0 1-4.82-1.32l-.35-.21-3.58.94.96-3.49-.23-.36a9.43 9.43 0 0 1-1.45-5.03c0-5.22 4.25-9.47 9.48-9.47 2.53 0 4.91.99 6.7 2.78a9.4 9.4 0 0 1 2.77 6.7c0 5.22-4.25 9.46-9.47 9.46zm8.06-17.53A11.33 11.33 0 0 0 12.04.63C5.76.63.64 5.74.64 12.03c0 2.01.52 3.97 1.52 5.7L.55 23.6l6.02-1.58a11.35 11.35 0 0 0 5.46 1.39h.01c6.28 0 11.4-5.11 11.4-11.4 0-3.05-1.19-5.91-3.34-8.07z"/></svg>
+            Enviar no WhatsApp
+          </a>
+          <button type="button" class="btn btn--ghost btn--block" data-native-share hidden>Compartilhar de outro jeito</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="faq" aria-labelledby="faq-titulo">
+    <div class="wrap wrap--narrow">
+      <h2 id="faq-titulo">Perguntas rápidas</h2>
+      <details>
+        <summary>Para quem vai o Pix?</summary>
+        <p>A chave é o CPF de Iuri Moreno Chaves Pereira, diretor e produtor executivo do filme e sócio da Caolha Filmes. Confira o nome do favorecido no app do banco antes de confirmar.</p>
+      </details>
+      <details>
+        <summary>Como meu nome entra nos créditos?</summary>
+        <p>Depois do Pix, informe como você quer que o nome apareça: o seu, o do seu filho ou o da família. Todos os apoiadores entram nos créditos finais, qualquer que seja o valor.</p>
+      </details>
+      <details>
+        <summary>Posso apoiar sem colocar meu nome?</summary>
+        <p>Pode, sim. Se preferir não aparecer, é só não preencher o formulário dos créditos.</p>
+      </details>
+      <details>
+        <summary>Quando e onde o filme estreia?</summary>
+        <p>A estreia deve ser em Goiânia, provavelmente em uma ou duas salas por uma semana. Datas e cinemas ainda estão em negociação e serão anunciados aqui. Quanto mais apoio, mais divulgação, e mais chance de o filme ficar em cartaz e chegar a outras cidades.</p>
+      </details>
+      <details>
+        <summary>Como acompanho a arrecadação?</summary>
+        <p>O túnel no topo da página é atualizado todos os dias com o total recebido. Até R$ 100 mil, o objetivo é Goiânia. Depois disso, a barra muda de cor e seguimos rumo ao Brasil.</p>
+      </details>
+      <details>
+        <summary>O filme é para qual idade?</summary>
+        <p>É uma animação infantojuvenil, feita para assistir em família: tem aventura, comédia e personagens que as crianças vão adorar.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- ============ CTA FINAL ============ -->
+  <section class="final">
+    <img class="final__bg" src="assets/img/cerrado-faixa.webp" alt="" loading="lazy" width="1600" height="468">
+    <div class="wrap final__content">
+      <img class="final__malu" src="assets/img/malu-celebra.webp" alt="Malu comemorando" loading="lazy" width="357" height="640">
+      <div>
+        <h2>Vamos juntos levar a Malu ao cinema?</h2>
+        <a href="#apoiar" class="btn btn--yellow btn--big">Apoiar com Pix</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__grid">
+    <div>
+      <img src="assets/img/logo-malutatu.webp" alt="Malu Tatu" width="200" height="36" class="footer__logo" loading="lazy">
+      <p>Dirigido por Iuri Moreno e Carol Sakura.<br>Com as vozes de Tainá Müller e Mckeidy Lisita.</p>
+    </div>
+    <div class="footer__caolha">
+      <span>Uma produção</span>
+      <a href="https://www.caolha.com/" target="_blank" rel="noopener" aria-label="Caolha Filmes, conheça outros trabalhos">
+        <img src="assets/img/caolha-logo.png" alt="Caolha Filmes" width="220" height="38" loading="lazy">
+      </a>
+      <a href="https://www.caolha.com/" target="_blank" rel="noopener" class="footer__link">Conheça outros filmes da Caolha →</a>
+      <a href="https://www.instagram.com/caolhafilmes/" target="_blank" rel="noopener" class="footer__link">@caolhafilmes</a>
+    </div>
+  </div>
+  <p class="footer__small wrap">Imagens © Caolha Filmes. Todos os direitos reservados.</p>
+</footer>
+
+<a href="#apoiar" class="sticky-cta" data-sticky-cta aria-hidden="true" tabindex="-1">
+  <img src="assets/img/icon-180.png" alt="" width="32" height="32">
+  Apoiar com Pix
+</a>
+
+<div class="toast" role="status" aria-live="polite" data-toast></div>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

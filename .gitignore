@@ -1,0 +1,6 @@
+*.pdf
+*.mp4
+/source/*
+/stills/*
+*.DS_Store
+pix.jpeg
