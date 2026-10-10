@@ -116,7 +116,7 @@
       var v = parseMoney(otherInput.value);
       copyBrLabel.textContent = v ? 'Copiar Pix de ' + brlCents.format(v).replace(',00', '') : 'Copiar código Pix';
     } else {
-      copyBrLabel.textContent = 'Copiar Pix de R$ ' + selected;
+      copyBrLabel.textContent = 'Copiar Pix de ' + brl.format(selected);
     }
   }
   amountButtons.forEach(function (btn) {
