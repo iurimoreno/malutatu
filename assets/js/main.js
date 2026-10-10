@@ -157,43 +157,52 @@
   // ---------------------------------------------------------------
   // Mensagem para compartilhar
   // ---------------------------------------------------------------
-  var SHARE_MESSAGE = [
-    '🎬🐾 *Vamos levar a Malu Tatu para o cinema?*',
-    '',
-    'Malu Tatu é uma animação brasileira, feita aqui em Goiás, sobre uma tatuzinha engenheira que enfrenta a seca e um caçador de animais para salvar a sua toca no Cerrado. Tem a voz da Tainá Müller e roteiro premiado no FRAPA.',
-    '',
-    'O filme levou anos para ficar pronto. Agora falta o último passo: *chegar às telonas*, primeiro em Goiânia e depois no Brasil todo. Imagina levar as crianças para ver no cinema uma história nossa, com os bichos do nosso Cerrado? 💛',
-    '',
-    '✨ Qualquer valor ajuda, e *quem contribuir ganha o nome nos créditos finais do filme!*',
-    '',
-    '*Pix (CPF):* 99630141191',
-    '*Favorecido:* Iuri Moreno Chaves Pereira',
-    '',
-    'Veja o teaser e acompanhe a campanha:',
-    '👉 ' + SITE_URL,
-    '',
-    'Não pode contribuir agora? Compartilhar já ajuda muito! 🫶'
-  ].join('\n');
+  // O prazo da meta Goiânia entra na mensagem quando o campanha.json carrega
+  function buildShareMessage(prazoGoiania) {
+    return [
+      '🎬🐾 *Vamos levar a Malu Tatu para o cinema?*',
+      '',
+      'Malu Tatu é uma animação brasileira, feita aqui em Goiás, sobre uma tatuzinha engenheira que enfrenta a seca e um caçador de animais para salvar a sua toca no Cerrado. Tem a voz da Tainá Müller e roteiro premiado no FRAPA.',
+      '',
+      'O filme levou anos para ficar pronto. Agora falta o último passo: *chegar às telonas*, primeiro em Goiânia e depois no Brasil todo. Imagina levar as crianças para ver no cinema uma história nossa, com os bichos do nosso Cerrado? 💛',
+      '',
+      '✨ Qualquer valor ajuda, e *quem contribuir ganha o nome nos créditos finais do filme!*',
+      prazoGoiania ? '⏳ A campanha para o lançamento em Goiânia vai até *' + prazoGoiania + '*.' : null,
+      '',
+      '*Pix (CPF):* 99630141191',
+      '*Favorecido:* Iuri Moreno Chaves Pereira',
+      '',
+      'Veja o teaser e acompanhe a campanha:',
+      '👉 ' + SITE_URL,
+      '',
+      'Não pode contribuir agora? Compartilhar já ajuda muito! 🫶'
+    ].filter(function (line) { return line !== null; }).join('\n');
+  }
 
+  var shareMessage = '';
   var bubble = $('[data-share-message]');
-  bubble.innerHTML = SHARE_MESSAGE
-    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
-    .replace(/\*([^*\n]+)\*/g, '<strong>$1</strong>');
+  function renderShareMessage(prazoGoiania) {
+    shareMessage = buildShareMessage(prazoGoiania);
+    bubble.innerHTML = shareMessage
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/\*([^*\n]+)\*/g, '<strong>$1</strong>');
+    $('[data-wa-link]').href = 'https://wa.me/?text=' + encodeURIComponent(shareMessage);
+  }
+  renderShareMessage(null);
 
   $('[data-copy-message]').addEventListener('click', function () {
-    copyText(SHARE_MESSAGE).then(function () {
+    copyText(shareMessage).then(function () {
       toast('Mensagem copiada! É só colar no WhatsApp 📲');
     }, function () {
-      window.prompt('Copie a mensagem:', SHARE_MESSAGE);
+      window.prompt('Copie a mensagem:', shareMessage);
     });
   });
-  $('[data-wa-link]').href = 'https://wa.me/?text=' + encodeURIComponent(SHARE_MESSAGE);
 
   var nativeBtn = $('[data-native-share]');
   if (navigator.share) {
     nativeBtn.hidden = false;
     nativeBtn.addEventListener('click', function () {
-      navigator.share({ title: 'Leve Malu Tatu aos cinemas', text: SHARE_MESSAGE }).catch(function () {});
+      navigator.share({ title: 'Leve Malu Tatu aos cinemas', text: shareMessage }).catch(function () {});
     });
   }
 
@@ -265,9 +274,29 @@
       if (parts.length === 3) $('[data-updated]').textContent = 'Atualizado em ' + parts[2] + '/' + parts[1] + '/' + parts[0];
     }
 
+    // Prazo da meta Goiânia (a meta Brasil não tem prazo)
+    var prazoTxt = null;
+    var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(String(data.prazo_goiania || ''));
+    if (m) {
+      var fim = new Date(Number(m[1]), Number(m[2]) - 1, Number(m[3]), 23, 59, 59);
+      var dias = Math.ceil((fim - new Date()) / 86400000);
+      if (dias > 0 && v < META_GOIANIA) {
+        prazoTxt = m[3] + '/' + m[2];
+        var cd = $('[data-countdown]');
+        cd.textContent = dias === 1
+          ? '⏳ Último dia para a meta Goiânia!'
+          : '⏳ Faltam ' + dias + ' dias (até ' + prazoTxt + ')';
+        cd.hidden = false;
+        var gd = $('[data-goiania-deadline]');
+        gd.textContent = 'até ' + prazoTxt;
+        gd.hidden = false;
+      }
+    }
+    renderShareMessage(prazoTxt);
+
     var chip = $('[data-hero-chip]');
     if (v > 0) {
-      $('[data-hero-chip-text]').textContent = brl.format(v) + ' arrecadados de R$ 100 mil';
+      $('[data-hero-chip-text]').textContent = brl.format(v) + ' arrecadados de R$ 100 mil' + (prazoTxt ? ' · até ' + prazoTxt : '');
       chip.hidden = false;
     }
 

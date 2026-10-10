@@ -13,6 +13,7 @@ Edite só o arquivo [`campanha.json`](campanha.json), direto no GitHub (ícone d
   "arrecadado": 12350,
   "apoiadores": 87,
   "atualizado_em": "2026-10-12",
+  "prazo_goiania": "2026-11-15",
   "prazo_creditos": "2026-11-15",
   "formulario_creditos": "https://forms.gle/..."
 }
@@ -23,6 +24,7 @@ Edite só o arquivo [`campanha.json`](campanha.json), direto no GitHub (ícone d
 | `arrecadado` | Total recebido, em reais, só números (sem ponto, sem R$). Ex.: `12350` |
 | `apoiadores` | Quantidade de pessoas que contribuíram. Use `0` para esconder. |
 | `atualizado_em` | Data da atualização, no formato `AAAA-MM-DD`. |
+| `prazo_goiania` | Data final da campanha para o lançamento em Goiânia (`AAAA-MM-DD`). O site mostra a contagem regressiva e coloca a data na mensagem do WhatsApp. Some quando a meta é batida ou a data passa. A meta Brasil não tem prazo. |
 | `prazo_creditos` | Último dia para entrar nos créditos (`AAAA-MM-DD`), ou `null` para esconder. |
 | `formulario_creditos` | Link do formulário onde o apoiador informa o nome para os créditos, ou `null`. |
 

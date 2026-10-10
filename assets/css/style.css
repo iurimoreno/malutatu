@@ -161,6 +161,10 @@ section { position: relative; }
 .tunnel-stats__value { font-family: var(--font-title); font-size: clamp(2.6rem, 9vw, 4.4rem); line-height: 1; color: var(--capacete); }
 .tunnel-stats__side { display: flex; flex-direction: column; gap: 4px; text-align: right; font-weight: 700; font-size: 1.05rem; }
 .tunnel-stats__people { color: var(--areia-300); font-weight: 600; }
+.tunnel-stats__countdown { align-self: flex-end; background: var(--focinho); color: #fff; font-weight: 800; font-size: .95rem; padding: 4px 12px; border-radius: 999px; }
+.tunnel__label em { font-style: normal; font-weight: 800; color: var(--capacete); }
+@media (max-width: 600px) { .tunnel-stats__countdown { align-self: flex-start; } }
+.tunnel__labels { height: 74px; }
 @media (max-width: 600px) { .tunnel-stats__side { text-align: left; } }
 
 .tunnel { position: relative; padding-top: 74px; }
