@@ -288,8 +288,11 @@
     renderTunnel();
   }
 
-  // ?demo=150000 permite testar a barra sem alterar o campanha.json
-  var demo = new URLSearchParams(location.search).get('demo');
+  // ?demo=150000 permite testar a barra sem alterar o campanha.json.
+  // Só funciona rodando localmente: no site publicado, um link com ?demo=
+  // mostraria um valor falso para quem vai doar.
+  var isLocal = /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);
+  var demo = isLocal ? new URLSearchParams(location.search).get('demo') : null;
 
   fetch('campanha.json', { cache: 'no-store' })
     .then(function (r) { return r.json(); })

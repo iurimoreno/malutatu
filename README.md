@@ -28,7 +28,7 @@ Edite só o arquivo [`campanha.json`](campanha.json), direto no GitHub (ícone d
 
 O site atualiza em 1 a 2 minutos depois do commit.
 
-Para testar a barra com outro valor sem mexer no arquivo, abra `https://malutatu.com.br/?demo=150000`.
+Para testar a barra com outro valor sem mexer no arquivo, rode o site localmente (`python3 -m http.server 8000`) e abra `http://localhost:8000/?demo=150000`. Por segurança, o `?demo=` é ignorado no site publicado, para ninguém compartilhar um link com valor falso.
 
 ## Como a barra funciona
 
