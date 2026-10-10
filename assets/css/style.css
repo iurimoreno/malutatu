@@ -28,13 +28,13 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+html { font-size: 112.5%; scroll-behavior: smooth; scroll-padding-top: 72px; }
 body {
   margin: 0;
   background: var(--areia-100);
   color: var(--texto);
   font-family: var(--font-body);
-  font-size: 17px;
+  font-size: 1rem;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
@@ -42,7 +42,7 @@ body {
 img { max-width: 100%; height: auto; display: block; }
 [hidden] { display: none !important; }
 h1, h2, h3 { font-family: var(--font-title); font-weight: 400; line-height: 1.12; margin: 0 0 .5em; letter-spacing: .01em; }
-h2 { font-size: clamp(2rem, 5vw, 3.1rem); }
+h2 { font-size: clamp(1.8rem, 5vw, 2.75rem); }
 h3 { font-size: 1.45rem; }
 p { margin: 0 0 1em; }
 a { color: inherit; }
@@ -69,7 +69,7 @@ section { position: relative; }
   display: inline-flex; align-items: center; justify-content: center; gap: .55em;
   padding: .85em 1.4em; border-radius: 999px; border: 2px solid transparent;
   background: var(--bg); color: var(--fg); font: 800 1rem/1.2 var(--font-body);
-  text-decoration: none; cursor: pointer; transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+  text-decoration: none; text-align: center; cursor: pointer; transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
   -webkit-tap-highlight-color: transparent;
 }
 .btn:hover { transform: translateY(-2px); }
@@ -133,9 +133,13 @@ section { position: relative; }
 }
 .hero__logo { width: min(540px, 88vw); margin-bottom: 18px; filter: drop-shadow(0 6px 18px rgba(0,0,0,.5)); }
 .hero__kicker { font-weight: 800; letter-spacing: .08em; text-transform: uppercase; font-size: .85rem; color: var(--capacete); margin-bottom: .6em; }
-.hero__title { font-size: clamp(1.9rem, 5.2vw, 3.4rem); max-width: 820px; text-shadow: 0 3px 18px rgba(0,0,0,.45); }
+.hero__title { font-size: clamp(1.7rem, 5.2vw, 3rem); max-width: 820px; text-shadow: 0 3px 18px rgba(0,0,0,.45); }
 .hero__lead { font-size: clamp(1.05rem, 2.2vw, 1.25rem); max-width: 620px; color: #f6eadb; }
 .hero__ctas { display: flex; flex-wrap: wrap; gap: 14px; margin: 26px 0 22px; }
+@media (max-width: 480px) {
+  .hero__ctas .btn { width: 100%; }
+  .btn--big { font-size: 1rem; padding: 1em 1.2em; }
+}
 .hero__chip {
   display: inline-flex; align-items: center; gap: 10px; padding: 8px 16px 8px 12px; border-radius: 999px;
   background: rgba(0,0,0,.45); border: 1px solid rgba(255,255,255,.2); font-weight: 700; font-size: .95rem; text-decoration: none;
